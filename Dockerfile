@@ -58,7 +58,7 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-RUN pip3 install num2words xlwt paramiko xmltodict pdf2image
+RUN pip3 install num2words xlwt paramiko xmltodict pdf2image phonenumbers
 COPY ./entrypoint.sh /
 RUN chown odoo /entrypoint.sh \
     && chmod +x /entrypoint.sh
